@@ -1,0 +1,64 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Tecno'
+		};
+
+block main
+	section.hero
+		.hero__bg
+			+picture('hero-bg', 'jpg', 'hero__bg-image', '')
+		.container.hero__container
+			.hero__wrapper
+				.hero__top
+					+icon('hero-title', 'hero__title')
+					.hero__subtitle трезвый взгляд на&nbsp;устройство среднего класса
+					svg.hero__arrows(width='218', height='81', viewbox='0 0 218 81', fill='none', xmlns='http://www.w3.org/2000/svg')
+						path(fill-rule='evenodd', clip-rule='evenodd', d='M46.8962 79.9436C46.1464 80.6932 44.8644 80.162 44.864 79.1018L44.864 64.8548C44.864 62.8815 45.6474 60.9884 47.0427 59.5931L66.4587 40.178L47.0427 20.762C45.6477 19.3667 44.8641 17.4743 44.864 15.5013L44.864 1.25419C44.8641 0.19363 46.1463 -0.337547 46.8962 0.412391L86.6609 40.178L86.6619 40.178L46.8962 79.9436Z', fill='#0264fa', fill-opacity='0.35')
+						path(fill-rule='evenodd', clip-rule='evenodd', d='M131.794 79.9439C131.044 80.6931 129.762 80.1621 129.762 79.1022L129.762 64.8551C129.762 62.8818 130.546 60.9887 131.942 59.5934L151.358 40.1783L131.942 20.7623C130.546 19.3671 129.762 17.4747 129.762 15.5016L129.762 1.2545C129.762 0.193915 131.044 -0.337234 131.794 0.412699L171.56 40.1783L131.794 79.9439Z', fill='#0264fa', fill-opacity='0.35')
+						path(d='M11.6183 79.9435C10.8919 80.6698 9.66572 80.1942 9.58945 79.1998L9.58571 79.1017L10.3526 79.1017C10.3528 79.4788 10.8092 79.6681 11.0761 79.4013L50.2991 40.1784L11.0761 0.955461C10.8089 0.688206 10.3528 0.877825 10.3526 1.25429L9.5857 1.25429L9.58945 1.15618C9.66333 0.193967 10.8139 -0.281995 11.5464 0.34657L11.6183 0.413226L51.3835 40.1784L11.6183 79.9435ZM10.3526 15.5014L9.5857 15.5014L9.5857 1.25429L10.3526 1.25429L10.3526 15.5014ZM12.3074 60.1362C11.0558 61.3878 10.3526 63.0854 10.3526 64.8553L9.58571 64.8553L9.59469 64.4861C9.67989 62.7698 10.3571 61.1352 11.5105 59.8614L11.7651 59.594L31.1815 40.1784L11.7651 20.7628L11.5105 20.4954C10.3571 19.2216 9.67995 17.5869 9.59469 15.8707L9.5857 15.5014L10.3526 15.5014C10.3527 17.2713 11.0558 18.969 12.3074 20.2205L32.266 40.1784L12.3074 60.1362ZM10.3526 79.1017L9.58571 79.1017L9.58571 64.8553L10.3526 64.8553L10.3526 79.1017Z', fill='#0264fa')
+						path(fill-rule='evenodd', clip-rule='evenodd', d='M2.03223 79.8819C1.28232 80.6313 0.000325204 80.1003 9.42544e-07 79.0401L7.7265e-07 64.7931C3.88961e-05 62.8198 0.784341 60.9267 2.17969 59.5313L21.5957 40.1163L2.17969 20.7013C0.784325 19.3059 1.92811e-05 17.4129 1.84115e-07 15.4396L1.42202e-08 1.19248C0.000377657 0.132359 1.28233 -0.398637 2.03223 0.350685L41.7979 40.1163L2.03223 79.8819Z', fill='#0264fa', fill-opacity='0.31')
+						path(fill-rule='evenodd', clip-rule='evenodd', d='M99.3535 79.8819C98.6036 80.6313 97.3217 80.1003 97.3213 79.0401L97.3213 64.7931C97.3213 62.8197 98.1056 60.9267 99.501 59.5313L118.916 40.1163L118.915 40.1163L99.5 20.7013C98.1047 19.306 97.3214 17.4127 97.3213 15.4395L97.3213 1.19345C97.3213 0.132863 98.6035 -0.398251 99.3535 0.351651L139.118 40.1163L139.119 40.1163L99.3535 79.8819Z', fill='#0264fa')
+						path(fill-rule='evenodd', clip-rule='evenodd', d='M178.032 79.8825C177.282 80.6314 176.001 80.1004 176 79.0407L176 64.7936C176 62.8204 176.784 60.9272 178.18 59.5319L197.595 40.1168L178.179 20.7008C176.784 19.3056 176 17.4131 176 15.4401L176 1.19301C176 0.132482 177.282 -0.39869 178.032 0.35121L217.798 40.1168L178.032 79.8825Z', fill='#0264fa')
+				.hero__bottom
+					.hero__description.
+						TECNO MEGAPAD Pro – универсальный планшет для&nbsp;всех базовых задач. У&nbsp;него большой 12-дюймовый экран, неплохая
+						автономность и&nbsp;есть поддержка LTE. Тестовая лаборатория ZOOM.CNews внимательно изучила новинку и&nbsp;рассказывает
+						о&nbsp;ней в&nbsp;своем обзоре.
+					+button('Читать полностью', 'hero__button', '#', 'arrow-right', '35', '8')
+	section.advantages
+		.container
+			.advantages__wrapper
+				+title('Ключевые преимущества', 'advantages__title')
+				.advantages__bg
+					+picture('advantages', 'jpg', 'advantages__bg-image', '')
+				.advantages__items
+					.advantages__col
+						.advantages-item
+							.advantages-item__icon
+								+icon('advantages-1')(width='63', height='44')
+							.advantages-item__text 12" Крупный чёткий экран
+						.advantages-item
+							.advantages-item__icon
+								+icon('advantages-2')(width='55', height='56')
+							.advantages-item__text Заряжен TECNO AI
+						.advantages-item
+							.advantages-item__icon
+								+icon('advantages-3')(width='54', height='54')
+							.advantages-item__text Большой объем памяти
+					.advantages__col
+						.advantages-item
+							.advantages-item__icon
+								+icon('advantages-4')(width='81', height='91')
+							.advantages-item__text Ультратонкий корпус из металла
+						.advantages-item
+							.advantages-item__icon
+								+icon('advantages-5')(width='54', height='54')
+							.advantages-item__text Dolby Atmos
+						.advantages-item
+							.advantages-item__icon
+								+icon('advantages-6')(width='71', height='31')
+							.advantages-item__text Огромный аккумулятор
+				.advantages__colors

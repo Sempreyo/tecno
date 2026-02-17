@@ -1,0 +1,32 @@
+.button-up {
+	position: fixed;
+	right: 50px;
+	bottom: 35px;
+	z-index: 12;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	border-radius: 3px;
+	background-color: rgba($color-button, 0.2);
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s ease;
+	cursor: pointer;
+
+	@include max(tl) {
+		right: 15px;
+		bottom: 15px;
+	}
+
+	&:hover {
+		background-color: rgba($color-button, 0.3);
+	}
+
+	&--visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}

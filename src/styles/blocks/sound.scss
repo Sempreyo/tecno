@@ -1,0 +1,51 @@
+.sound {
+	position: relative;
+	z-index: 1;
+
+	&__arrow {
+		position: absolute;
+	}
+
+	&__group {
+		position: relative;
+		margin-top: 28px;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: -106px;
+		left: 68%;
+		z-index: 1;
+		transform: rotate(-90deg);
+	}
+
+	&__banner {
+		position: relative;
+	}
+
+	&__banner-image {
+		max-width: 621px;
+		width: 100%;
+		border-radius: 18px;
+	}
+
+	&__border {
+		position: absolute;
+		bottom: -50px;
+		left: 62px;
+		width: calc(100% - 62px);
+		border: 1px solid $color-button;
+		border-radius: 18px;
+		padding: 25px 27px 50px;
+	}
+
+	&__content {
+		max-width: 268px;
+		margin-left: auto;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 500;
+	}
+}

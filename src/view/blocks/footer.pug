@@ -1,6 +1,12 @@
 footer.footer
-	.container
-		.footer__adv
+	.footer__bg
+		+picture('hero-bg', 'jpg', 'footer__bg-image', '')
+	.container.footer__container
+		a.footer__logo(href='#')
+			+icon('logo-tecno')(width='137', height='28')
+		a.footer__logo(href='#')
+			+icon('logo-cnews')(width='137', height='25')
+		//.footer__adv
 			span Реклама
 			.footer__adv-tooltip
 				.footer__adv-tooltip-block.
@@ -8,5 +14,3 @@ footer.footer
 					Рекламодатель: test <br>
 					ИНН/ОГРН: 000/000000 <br>
 					Сайт: <a href="#" target="_blank">test</a>
-		a.footer__logo(href='#', target='_blank')
-			+icon('logo-cnews')(width='94', height='17')

@@ -44,6 +44,10 @@
 	@return $result;
 }
 
+@function vw($px) {
+	@return calc(($px/1920) * 100)+vw;
+}
+
 @function vw1440($px) {
 	@return calc(($px/1440) * 100)+vw;
 }

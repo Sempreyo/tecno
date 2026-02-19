@@ -1,0 +1,38 @@
+.design {
+	position: relative;
+	background-color: $black;
+	padding: 155px 0 147px;
+
+	&__container {
+		position: relative;
+		max-width: 990px;
+	}
+
+	&__border {
+		position: absolute;
+		top: 56px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 624px;
+		height: 669px;
+	}
+
+	&__bg {
+		margin: 30px -110px 0 -120px;
+	}
+
+	&__text {
+		color: $white;
+		max-width: 670px;
+		margin-top: 25px;
+	}
+
+	&__arrows {
+		position: absolute;
+		top: 0;
+		right: 75px;
+		display: flex;
+		flex-direction: column;
+		gap: 75px;
+	}
+}

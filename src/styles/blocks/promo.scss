@@ -1,0 +1,48 @@
+.promo {
+	position: relative;
+	background-color: $color-bg-2;
+	padding: 58px 0 60px;
+	margin-top: -167px;
+
+	&__icon {
+		position: absolute;
+		top: 62px;
+		right: 14%;
+	}
+
+	&__container {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		gap: 32px;
+		max-width: 990px;
+	}
+
+	&__images {
+		position: relative;
+		min-width: 48%;
+	}
+
+	&__image-1,
+	&__image-2 {
+		position: absolute;
+		filter: drop-shadow(14px 13px 62px rgba(68, 91, 125, 0.65));
+	}
+
+	&__image-2 {
+		top: 213px;
+		right: 37px;
+	}
+
+	&__content {
+		padding-top: 77px;
+	}
+
+	&__text {
+		margin-top: 32px;
+	}
+
+	&__button {
+		margin-top: 30px;
+	}
+}

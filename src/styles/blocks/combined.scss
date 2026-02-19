@@ -1,0 +1,17 @@
+.combined {
+	position: relative;
+	z-index: 1;
+
+	&__container {
+		max-width: 990px;
+	}
+
+	&__sound {
+		margin-top: -171px;
+	}
+
+	&__autonomy {
+		margin-top: 87px;
+		margin-bottom: -286px;
+	}
+}

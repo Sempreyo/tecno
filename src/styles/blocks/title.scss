@@ -1,9 +1,9 @@
 .title {
-	color: $black;
-	font-weight: 400;
+	color: $color-title;
+	font-weight: 700;
 	font-size: 40px;
 	line-height: 1.2;
-	text-align: center;
+	text-transform: uppercase;
 
 	@include max(d) {
 		font-size: fluid(35, 40, 992, 1280);
@@ -15,5 +15,9 @@
 
 	@include max(ti) {
 		font-size: fluid(22, 30, 0, 768);
+	}
+
+	&--white {
+		color: $white;
 	}
 }

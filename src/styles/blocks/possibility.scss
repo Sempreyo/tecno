@@ -1,0 +1,48 @@
+.possibility {
+	position: relative;
+	padding: 50px 0 80px;
+
+	&__container {
+		max-width: 990px;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1;
+		border-radius: 18px;
+		border: 1px solid $color-button;
+		padding: 20px 35px 56px;
+		background-color: $white;
+	}
+
+	&__list {
+		max-width: 315px;
+		padding-left: 30px;
+		margin-top: 65px;
+		list-style: initial;
+
+		li {
+			color: $color-title;
+			font-size: 18px;
+			font-weight: 500;
+
+			& + li {
+				margin-top: 25px;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: -210px;
+		right: -443px;
+		min-width: 990px;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: -290px;
+		right: 36px;
+		transform: rotate(180deg);
+	}
+}

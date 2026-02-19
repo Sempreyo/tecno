@@ -1,0 +1,54 @@
+.screen {
+	padding: 67px 0 62px;
+
+	&__container {
+		max-width: 1184px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 68px;
+		padding-left: 98px;
+	}
+
+	&__text {
+		max-width: 388px;
+	}
+
+	&__banner {
+		position: relative;
+		margin-top: 50px;
+	}
+
+	&__banner-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 18px;
+	}
+
+	&__arrows {
+		position: absolute;
+		left: 7px;
+		top: 44%;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+		width: 99%;
+	}
+
+	&__arrow-1 {
+		transform: rotate(-90deg);
+	}
+
+	&__arrow-2 {
+		transform: rotate(-90deg);
+	}
+
+	&__characteristics {
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+	}
+}

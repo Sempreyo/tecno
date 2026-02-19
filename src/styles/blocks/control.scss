@@ -1,0 +1,47 @@
+.control {
+	position: relative;
+	background-color: $black;
+	padding: 73px 0 436px;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		left: 65px;
+		bottom: -521px;
+		z-index: 1;
+		content: "";
+		display: block;
+		width: 1042px;
+		height: 1042px;
+		background: radial-gradient(50% 50% at 50% 50%, #0264fa 0%, rgba(2, 100, 250, 0) 100%);
+	}
+
+	&__container {
+		max-width: 990px;
+	}
+
+	&__wrapper {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__border {
+		position: absolute;
+		top: -45px;
+		left: 39px;
+		width: 624px;
+		height: 350px;
+	}
+
+	&__text {
+		color: $white;
+		max-width: 408px;
+		margin-top: 18px;
+	}
+
+	&__bg-image {
+		position: absolute;
+		top: -3px;
+		right: 102px;
+	}
+}

@@ -5,7 +5,11 @@
 
 	&__container {
 		position: relative;
-		max-width: vw(993);
+		max-width: 993px;
+
+		@include max(dxl) {
+			max-width: vw(993);
+		}
 
 		@include max(d) {
 			max-width: vwd(993);
@@ -18,14 +22,21 @@
 
 	&__border {
 		position: absolute;
-		top: vw(93);
-		bottom: vw(48);
+		top: 93px;
+		bottom: 48px;
 		left: 50%;
 		transform: translateX(-50%);
-		width: vw(624);
-		height: vw(942);
+		width: 624px;
+		height: 942px;
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 2000;
+
+		@include max(dxl) {
+			top: vw(93);
+			bottom: vw(48);
+			width: vw(624);
+			height: vw(942);
+		}
 
 		@include max(d) {
 			top: vwd(93);
@@ -47,8 +58,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: vw(161) 0 vw(48);
+		padding: 170px 0 48px;
 		//min-height: 100vh;
+
+		@include max(dxl) {
+			padding: vw(170) 0 vw(48);
+		}
 
 		@include max(d) {
 			padding: vwd(161) 0 vwd(48);
@@ -71,10 +86,15 @@
 	}
 
 	&__title {
-		width: vw(716);
-		height: vw(300);
+		width: 716px;
+		height: 300px;
 		opacity: 0;
 		transform: translateY(100px);
+
+		@include max(dxl) {
+			width: vw(716);
+			height: vw(300);
+		}
 
 		@include max(d) {
 			width: vwd(716);
@@ -88,15 +108,23 @@
 	}
 
 	&__subtitle {
-		max-width: vw(370);
+		display: block;
+		max-width: 370px;
 		color: $white;
-		font-size: vw(30);
+		font-size: 30px;
 		line-height: 1.4;
 		text-transform: uppercase;
-		letter-spacing: vw(0.8);
-		margin-top: vw(4);
+		letter-spacing: 0.8px;
+		margin-top: 4px;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			max-width: vw(370);
+			font-size: vw(30);
+			letter-spacing: vw(0.8);
+			margin-top: vw(4);
+		}
 
 		@include max(d) {
 			max-width: vwd(370);
@@ -111,15 +139,31 @@
 			letter-spacing: vwti(0.8);
 			margin-top: vwti(4);
 		}
+
+		a {
+			transition: 0.3s ease;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
 	}
 
 	&__arrows {
-		width: vw(218);
-		height: vw(81);
-		margin-top: vw(30);
-		margin-left: vw(15);
+		display: block;
+		width: 218px;
+		height: 81px;
+		margin-top: 30px;
+		margin-left: 15px;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			width: vw(218);
+			height: vw(81);
+			margin-top: vw(30);
+			margin-left: vw(15);
+		}
 
 		@include max(d) {
 			width: vwd(218);
@@ -139,11 +183,17 @@
 	&__phone {
 		position: absolute;
 		top: 33%;
-		right: vw(-105);
-		width: vw(682);
-		height: vw(419);
+		right: -105px;
+		width: 682px;
+		height: 419px;
 		opacity: 0;
 		transform: translateX(50px);
+
+		@include max(dxl) {
+			right: vw(-105);
+			width: vw(682);
+			height: vw(419);
+		}
 
 		@include max(d) {
 			right: vwd(-105);
@@ -165,10 +215,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		max-width: vw(624);
-		padding: vw(149) vw(32) 0 vw(32);
+		max-width: 624px;
+		padding: 149px 32px 0 32px;
 		margin: 0 auto;
 		opacity: 0;
+
+		@include max(dxl) {
+			max-width: vw(624);
+			padding: vw(149) vw(32) 0 vw(32);
+		}
 
 		@include max(d) {
 			max-width: vwd(624);
@@ -185,10 +240,19 @@
 		position: relative;
 		color: $white;
 		font-weight: 500;
+		transition: 0.3s ease;
+
+		&:hover {
+			opacity: 0.7;
+		}
 	}
 
 	&__button {
-		margin-top: vw(27);
+		margin-top: 27px;
+
+		@include max(dxl) {
+			margin-top: vw(27);
+		}
 
 		@include max(d) {
 			margin-top: vwd(27);
@@ -199,8 +263,13 @@
 		}
 
 		svg {
-			width: vw(35);
-			height: vw(8);
+			width: 35px;
+			height: 8px;
+
+			@include max(dxl) {
+				width: vw(35);
+				height: vw(8);
+			}
 
 			@include max(d) {
 				width: vwd(35);

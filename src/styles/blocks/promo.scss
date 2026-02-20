@@ -1,8 +1,13 @@
 .promo {
 	position: relative;
 	background-color: $color-bg-2;
-	padding: vw(58) 0 vw(60);
-	margin-top: vw(-167);
+	padding: 58px 0 60px;
+	margin-top: -167px;
+
+	@include max(dxl) {
+		padding: vw(58) 0 vw(60);
+		margin-top: vw(-167);
+	}
 
 	@include max(d) {
 		padding: vwd(58) 0 vwd(60);
@@ -16,10 +21,16 @@
 
 	&__icon {
 		position: absolute;
-		top: vw(62);
+		top: 62px;
 		right: 14%;
-		width: vw(447);
-		height: vw(438);
+		width: 447px;
+		height: 438px;
+
+		@include max(dxl) {
+			top: vw(62);
+			width: vw(447);
+			height: vw(438);
+		}
 
 		@include max(d) {
 			top: vwd(62);
@@ -39,7 +50,11 @@
 		z-index: 1;
 		display: flex;
 		gap: vw(32);
-		max-width: vw(990);
+		max-width: 990px;
+
+		@include max(dxl) {
+			max-width: vw(990);
+		}
 
 		@include max(d) {
 			gap: vwd(32);
@@ -73,8 +88,13 @@
 	}
 
 	&__image-1 {
-		width: vw(456);
-		height: vw(313);
+		width: 456px;
+		height: 313px;
+
+		@include max(dxl) {
+			width: vw(456);
+			height: vw(313);
+		}
 
 		@include max(d) {
 			width: vwd(456);
@@ -88,10 +108,17 @@
 	}
 
 	&__image-2 {
-		top: vw(213);
-		right: vw(37);
-		width: vw(281);
-		height: vw(352);
+		top: 213px;
+		right: 37px;
+		width: 281px;
+		height: 352px;
+
+		@include max(dxl) {
+			top: vw(213);
+			right: vw(37);
+			width: vw(281);
+			height: vw(352);
+		}
 
 		@include max(d) {
 			top: vwd(213);
@@ -109,7 +136,11 @@
 	}
 
 	&__content {
-		padding-top: vw(77);
+		padding-top: 77px;
+
+		@include max(dxl) {
+			padding-top: vw(77);
+		}
 
 		@include max(d) {
 			padding-top: vwd(77);
@@ -126,9 +157,13 @@
 	}
 
 	&__text {
-		margin-top: vw(32);
+		margin-top: 32px;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			margin-top: vw(32);
+		}
 
 		@include max(d) {
 			margin-top: vwd(32);
@@ -140,9 +175,13 @@
 	}
 
 	&__button {
-		margin-top: vw(30);
+		margin-top: 30px;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			margin-top: vw(30);
+		}
 
 		@include max(d) {
 			margin-top: vwd(30);

@@ -8,7 +8,11 @@
 
 	&__group {
 		position: relative;
-		margin-top: vw(28);
+		margin-top: 28px;
+
+		@include max(dxl) {
+			margin-top: vw(28);
+		}
 
 		@include max(d) {
 			margin-top: vwd(28);
@@ -21,13 +25,19 @@
 
 	&__arrow {
 		position: absolute;
-		top: vw(-106);
+		top: -106px;
 		left: 68%;
 		z-index: 1;
 		transform: translateY(50px) rotate(-90deg);
-		width: vw(83);
-		height: vw(211);
+		width: 83px;
+		height: 211px;
 		opacity: 0;
+
+		@include max(dxl) {
+			top: vw(-106);
+			width: vw(83);
+			height: vw(211);
+		}
 
 		@include max(d) {
 			top: vwd(-106);
@@ -47,10 +57,15 @@
 	}
 
 	&__banner-image {
-		max-width: vw(621);
+		max-width: 621px;
 		width: 100%;
-		border-radius: vw(18);
+		border-radius: 18px;
 		opacity: 0;
+
+		@include max(dxl) {
+			max-width: vw(621);
+			border-radius: vw(18);
+		}
 
 		@include max(d) {
 			max-width: vwd(621);
@@ -65,13 +80,22 @@
 
 	&__border {
 		position: absolute;
-		bottom: vw(-50);
-		left: vw(62);
-		width: calc(100% - #{vw(62)});
-		border: vw(1) solid $color-button;
-		border-radius: vw(18);
-		padding: vw(25) vw(27) vw(50);
+		bottom: -50px;
+		left: 62px;
+		width: calc(100% - 62px);
+		border: 1px solid $color-button;
+		border-radius: 18px;
+		padding: 25px 27px 50px;
 		opacity: 0;
+
+		@include max(dxl) {
+			bottom: vw(-50);
+			left: vw(62);
+			width: calc(100% - #{vw(62)});
+			border: vw(1) solid $color-button;
+			border-radius: vw(18);
+			padding: vw(25) vw(27) vw(50);
+		}
 
 		@include max(d) {
 			bottom: vwd(-50);
@@ -93,8 +117,12 @@
 	}
 
 	&__content {
-		max-width: vw(268);
+		max-width: 268px;
 		margin-left: auto;
+
+		@include max(dxl) {
+			max-width: vw(268);
+		}
 
 		@include max(d) {
 			max-width: vwd(268);
@@ -111,8 +139,12 @@
 	}
 
 	&__subtitle {
-		font-size: vw(24);
+		font-size: 24px;
 		font-weight: 500;
+
+		@include max(dxl) {
+			font-size: vw(24);
+		}
 
 		@include max(d) {
 			font-size: vwd(24);

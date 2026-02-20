@@ -1,7 +1,11 @@
 .design {
 	position: relative;
 	background-color: $black;
-	padding: vw(155) 0 vw(147);
+	padding: 155px 0 147px;
+
+	@include max(dxl) {
+		padding: vw(155) 0 vw(147);
+	}
 
 	@include max(d) {
 		padding: vwd(155) 0 vwd(147);
@@ -13,7 +17,11 @@
 
 	&__container {
 		position: relative;
-		max-width: vw(990);
+		max-width: 990px;
+
+		@include max(dxl) {
+			max-width: vw(990);
+		}
 
 		@include max(d) {
 			max-width: vwd(990);
@@ -31,13 +39,19 @@
 
 	&__border {
 		position: absolute;
-		top: vw(56);
+		top: 56px;
 		left: 50%;
 		transform: translateX(-50%);
-		width: vw(624);
-		height: vw(669);
+		width: 624px;
+		height: 669px;
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 2000;
+
+		@include max(dxl) {
+			top: vw(56);
+			width: vw(624);
+			height: vw(669);
+		}
 
 		@include max(d) {
 			top: vwd(56);
@@ -53,7 +67,11 @@
 	}
 
 	&__bg {
-		margin: vw(30) vw(-110) 0 vw(-120);
+		margin: 30px -110px 0 -120px;
+
+		@include max(dxl) {
+			margin: vw(30) vw(-110) 0 vw(-120);
+		}
 
 		@include max(d) {
 			margin: vwd(30) vwd(-110) 0 vwd(-120);
@@ -71,10 +89,15 @@
 
 	&__text {
 		color: $white;
-		max-width: vw(670);
-		margin-top: vw(25);
+		max-width: 670px;
+		margin-top: 25px;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			max-width: vw(670);
+			margin-top: vw(25);
+		}
 
 		@include max(d) {
 			max-width: vwd(670);
@@ -89,11 +112,17 @@
 
 	&__arrows {
 		position: absolute;
-		top: vw(-20);
-		right: vw(75);
+		top: -20px;
+		right: 75px;
 		display: flex;
 		flex-direction: column;
-		gap: vw(75);
+		gap: 75px;
+
+		@include max(dxl) {
+			top: vw(-20);
+			right: vw(75);
+			gap: vw(75);
+		}
 
 		@include max(d) {
 			top: vwd(-20);
@@ -110,9 +139,14 @@
 
 	&__arrow-1,
 	&__arrow-2 {
-		width: vw(83);
-		height: vw(211);
+		width: 83px;
+		height: 211px;
 		opacity: 0;
+
+		@include max(dxl) {
+			width: vw(83);
+			height: vw(211);
+		}
 
 		@include max(d) {
 			width: vwd(83);

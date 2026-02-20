@@ -3,7 +3,11 @@
 
 	position: relative;
 	width: 100%;
-	padding: vw(72) 0;
+	padding: 72px 0;
+
+	@include max(dxl) {
+		padding: vw(72) 0;
+	}
 
 	@include max(d) {
 		padding: vwd(72) 0;
@@ -31,7 +35,11 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: vw(20);
-		max-width: vw(990);
+		max-width: 990px;
+
+		@include max(dxl) {
+			max-width: vw(990);
+		}
 
 		@include max(d) {
 			gap: vwd(20);
@@ -53,8 +61,13 @@
 	}
 
 	&__logo-tecno {
-		width: vw(137);
-		height: vw(28);
+		width: 137px;
+		height: 28px;
+
+		@include max(dxl) {
+			width: vw(137);
+			height: vw(28);
+		}
 
 		@include max(d) {
 			width: vwd(137);
@@ -68,23 +81,28 @@
 	}
 
 	&__logo-cnews {
-		width: vw(137);
-		height: vw(25);
+		width: 99px;
+		height: 30px;
+
+		@include max(dxl) {
+			width: vw(99);
+			height: vw(30);
+		}
 
 		@include max(d) {
-			width: vwd(137);
-			height: vwd(25);
+			width: vwd(99);
+			height: vwd(30);
 		}
 
 		@include max(ti) {
-			width: vwti(137);
-			height: vwti(25);
+			width: vwti(99);
+			height: vwti(30);
 		}
 	}
 
 	&__adv {
 		position: relative;
-		cursor: pointer;
+		z-index: 1;
 
 		&:hover {
 			#{$parent}__adv-tooltip {
@@ -96,38 +114,105 @@
 		span {
 			display: flex;
 			align-items: center;
-			gap: vw(8);
+			gap: 8px;
 			color: $white;
-			font-size: vw(12);
+			font-size: 12px;
+			cursor: pointer;
+
+			@include max(dxl) {
+				gap: vw(8);
+				font-size: vw(12);
+			}
+
+			@include max(d) {
+				gap: vwd(8);
+				font-size: vwd(12);
+			}
+
+			@include max(ti) {
+				gap: vwti(8);
+				font-size: vwti(12);
+			}
 
 			&::before {
 				content: "";
-				width: vw(5);
-				height: vw(5);
+				width: 5px;
+				height: 5px;
 				background-color: $white;
+
+				@include max(dxl) {
+					width: vw(5);
+					height: vw(5);
+				}
+
+				@include max(d) {
+					width: vwd(5);
+					height: vwd(5);
+				}
+
+				@include max(ti) {
+					width: vwti(5);
+					height: vwti(5);
+				}
 			}
 		}
 	}
 
 	&__adv-tooltip {
 		position: absolute;
-		left: vw(-100);
+		left: -100px;
 		bottom: 100%;
-		width: vw(270);
-		border: vw(2) solid $color-button;
+		width: 270px;
+		border: 2px solid $color-button;
 		background: rgba($white, 0.7);
 		backdrop-filter: blur(11px);
-		border-radius: vw(2);
-		padding: vw(20) vw(10);
+		border-radius: 2px;
+		padding: 20px 10px;
 		opacity: 0;
 		pointer-events: none;
 		transition: 0.3s ease;
+
+		@include max(dxl) {
+			left: vw(-100);
+			width: vw(270);
+			border: vw(2) solid $color-button;
+			border-radius: vw(2);
+			padding: vw(20) vw(10);
+		}
+
+		@include max(d) {
+			left: vwd(-100);
+			width: vwd(270);
+			border: vwd(2) solid $color-button;
+			border-radius: vwd(2);
+			padding: vwd(20) vwd(10);
+		}
+
+		@include max(ti) {
+			left: vwti(-100);
+			width: vwti(270);
+			border: vwti(2) solid $color-button;
+			border-radius: vwti(2);
+			padding: vwti(20) vwti(10);
+		}
 	}
 
 	&__adv-tooltip-block {
 		color: $color-text;
-		font-size: vw(12);
+		font-size: 12px;
 		line-height: 1.2;
+
+		@include max(dxl) {
+			font-size: vw(12);
+		}
+
+		@include max(d) {
+			font-size: vwd(12);
+		}
+
+		@include max(ti) {
+			font-size: vwti(12);
+		}
 
 		a {
 			color: $color-text;
@@ -139,9 +224,27 @@
 		}
 
 		& + #{$parent}__adv-tooltip-block {
-			margin-top: vw(12);
-			padding-top: vw(12);
-			border-top: vw(1) solid $color-text;
+			margin-top: 12px;
+			padding-top: 12px;
+			border-top: 1px solid $color-text;
+
+			@include max(dxl) {
+				margin-top: vw(12);
+				padding-top: vw(12);
+				border-top: vw(1) solid $color-text;
+			}
+
+			@include max(d) {
+				margin-top: vwd(12);
+				padding-top: vwd(12);
+				border-top: vwd(1) solid $color-text;
+			}
+
+			@include max(ti) {
+				margin-top: vwti(12);
+				padding-top: vwti(12);
+				border-top: vwti(1) solid $color-text;
+			}
 		}
 	}
 }

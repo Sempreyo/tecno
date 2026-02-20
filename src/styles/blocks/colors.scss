@@ -2,7 +2,11 @@
 	&__wrapper {
 		display: flex;
 		justify-content: center;
-		gap: vw(20);
+		gap: 20px;
+
+		@include max(dxl) {
+			gap: vw(20);
+		}
 
 		@include max(d) {
 			gap: vwd(20);
@@ -17,9 +21,13 @@
 	&__item {
 		display: flex;
 		align-items: flex-end;
-		gap: vw(20);
+		gap: 20px;
 		text-align: right;
 		opacity: 0;
+
+		@include max(dxl) {
+			gap: vw(20);
+		}
 
 		@include max(d) {
 			gap: vwd(20);
@@ -45,8 +53,13 @@
 	}
 
 	&__text {
-		font-size: vw(23);
-		padding-bottom: vw(24);
+		font-size: 23px;
+		padding-bottom: 24px;
+
+		@include max(dxl) {
+			font-size: vw(23);
+			padding-bottom: vw(24);
+		}
 
 		@include max(d) {
 			font-size: vwd(23);
@@ -60,9 +73,14 @@
 
 		span {
 			display: block;
-			font-size: vw(38);
+			font-size: 38px;
 			line-height: 1.19;
-			margin-bottom: vw(10);
+			margin-bottom: 10px;
+
+			@include max(dxl) {
+				font-size: vw(38);
+				margin-bottom: vw(10);
+			}
 
 			@include max(d) {
 				font-size: vwd(38);
@@ -77,8 +95,13 @@
 	}
 
 	&__phone-1 {
-		width: vw(196);
-		height: vw(313);
+		width: 196px;
+		height: 313px;
+
+		@include max(dxl) {
+			width: vw(196);
+			height: vw(313);
+		}
 
 		@include max(d) {
 			width: vwd(196);
@@ -92,8 +115,13 @@
 	}
 
 	&__phone-2 {
-		width: vw(200);
-		height: vw(316);
+		width: 200px;
+		height: 316px;
+
+		@include max(dxl) {
+			width: vw(200);
+			height: vw(316);
+		}
 
 		@include max(d) {
 			width: vwd(200);
@@ -108,10 +136,15 @@
 
 	&__title {
 		text-align: center;
-		padding-left: vw(28);
-		margin-top: vw(26);
+		padding-left: 28px;
+		margin-top: 26px;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			padding-left: vw(28);
+			margin-top: vw(26);
+		}
 
 		@include max(d) {
 			padding-left: vwd(28);

@@ -32,8 +32,13 @@ html {
 	scroll-behavior: smooth;
 
 	// Переменные в vw для gsap
-	--move-distance: #{vw(50)};
-	--move-distance-small: #{vw(20)};
+	--move-distance: 50px;
+	--move-distance-small: 20px;
+
+	@include max(dxl) {
+		--move-distance: #{vw(50)};
+		--move-distance-small: #{vw(20)};
+	}
 
 	@include max(d) {
 		--move-distance: #{vwd(50)};
@@ -54,8 +59,12 @@ body {
 	background: $color-bg;
 	color: $black;
 	font-weight: 400;
-	font-size: vw(17);
+	font-size: 17px;
 	line-height: 1.3;
+
+	@include max(dxl) {
+		font-size: vw(17);
+	}
 
 	@include max(d) {
 		font-size: vwd(17);

@@ -5,7 +5,11 @@
 
 	&__banner-image {
 		width: 100%;
-		border-radius: vw(18);
+		border-radius: 18px;
+
+		@include max(dxl) {
+			border-radius: vw(18);
+		}
 
 		@include max(d) {
 			border-radius: vwd(18);
@@ -19,13 +23,20 @@
 	&__content {
 		position: relative;
 		display: flex;
-		gap: vw(45);
+		gap: 45px;
 		background-color: $color-button;
-		border-radius: vw(18);
-		padding: vw(43) vw(97);
-		margin: vw(-94) vw(66) 0;
+		border-radius: 18px;
+		padding: 43px 97px;
+		margin: -94px 66px 0;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			gap: vw(45);
+			border-radius: vw(18);
+			padding: vw(43) vw(97);
+			margin: vw(-94) vw(66) 0;
+		}
 
 		@include max(d) {
 			gap: vwd(45);
@@ -45,8 +56,12 @@
 
 	&__title {
 		color: $white;
-		font-size: vw(24);
+		font-size: 24px;
 		font-weight: 500;
+
+		@include max(dxl) {
+			font-size: vw(24);
+		}
 
 		@include max(d) {
 			font-size: vwd(24);

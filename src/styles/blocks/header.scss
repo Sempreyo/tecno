@@ -4,7 +4,11 @@
 	left: 0;
 	z-index: 10;
 	width: 100%;
-	padding: vw(89) 0 0;
+	padding: 89px 0 0;
+
+	@include max(dxl) {
+		padding: vw(89) 0 0;
+	}
 
 	@include max(d) {
 		padding: vwd(89) 0 0;
@@ -19,7 +23,11 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: vw(20);
-		max-width: vw(990);
+		max-width: 990px;
+
+		@include max(dxl) {
+			max-width: vw(990);
+		}
 
 		@include max(d) {
 			gap: vwd(20);
@@ -41,8 +49,13 @@
 	}
 
 	&__logo-tecno {
-		width: vw(137);
-		height: vw(28);
+		width: 137px;
+		height: 28px;
+
+		@include max(dxl) {
+			width: vw(137);
+			height: vw(28);
+		}
 
 		@include max(d) {
 			width: vwd(137);
@@ -56,17 +69,22 @@
 	}
 
 	&__logo-cnews {
-		width: vw(137);
-		height: vw(25);
+		width: 99px;
+		height: 30px;
+
+		@include max(dxl) {
+			width: vw(99);
+			height: vw(30);
+		}
 
 		@include max(d) {
-			width: vwd(137);
-			height: vwd(25);
+			width: vwd(99);
+			height: vwd(30);
 		}
 
 		@include max(ti) {
-			width: vwti(137);
-			height: vwti(25);
+			width: vwti(99);
+			height: vwti(30);
 		}
 	}
 }

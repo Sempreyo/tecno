@@ -3,7 +3,11 @@
 	z-index: 1;
 
 	&__container {
-		max-width: vw(990);
+		max-width: 990px;
+
+		@include max(dxl) {
+			max-width: vw(990);
+		}
 
 		@include max(d) {
 			max-width: vwd(990);
@@ -18,7 +22,11 @@
 	}
 
 	&__sound {
-		margin-top: vw(-171);
+		margin-top: -171px;
+
+		@include max(dxl) {
+			margin-top: vw(-171);
+		}
 
 		@include max(d) {
 			margin-top: vwd(-171);
@@ -30,8 +38,13 @@
 	}
 
 	&__autonomy {
-		margin-top: vw(87);
-		margin-bottom: vw(-286);
+		margin-top: 87px;
+		margin-bottom: -286px;
+
+		@include max(dxl) {
+			margin-top: vw(87);
+			margin-bottom: vw(-286);
+		}
 
 		@include max(d) {
 			margin-top: vwd(87);

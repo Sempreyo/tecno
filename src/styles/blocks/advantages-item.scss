@@ -7,11 +7,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: vw(110);
-		height: vw(110);
+		width: 110px;
+		height: 110px;
 		border-radius: 50%;
 		background-color: rgba($white, 0.61);
-		border: vw(1) solid $white;
+		border: 1px solid $white;
+
+		@include max(dxl) {
+			width: vw(110);
+			height: vw(110);
+			border: vw(1) solid $white;
+		}
 
 		@include max(d) {
 			width: vwd(110);
@@ -27,8 +33,13 @@
 	}
 
 	&__icon-1 {
-		width: vw(63);
-		height: vw(44);
+		width: 63px;
+		height: 44px;
+
+		@include max(dxl) {
+			width: vw(63);
+			height: vw(44);
+		}
 
 		@include max(d) {
 			width: vwd(63);
@@ -42,8 +53,13 @@
 	}
 
 	&__icon-2 {
-		width: vw(55);
-		height: vw(56);
+		width: 55px;
+		height: 56px;
+
+		@include max(dxl) {
+			width: vw(55);
+			height: vw(56);
+		}
 
 		@include max(d) {
 			width: vwd(55);
@@ -57,8 +73,13 @@
 	}
 
 	&__icon-3 {
-		width: vw(54);
-		height: vw(54);
+		width: 54px;
+		height: 54px;
+
+		@include max(dxl) {
+			width: vw(54);
+			height: vw(54);
+		}
 
 		@include max(d) {
 			width: vwd(54);
@@ -72,8 +93,13 @@
 	}
 
 	&__icon-4 {
-		width: vw(81);
-		height: vw(91);
+		width: 81px;
+		height: 91px;
+
+		@include max(dxl) {
+			width: vw(81);
+			height: vw(91);
+		}
 
 		@include max(d) {
 			width: vwd(81);
@@ -87,8 +113,13 @@
 	}
 
 	&__icon-5 {
-		width: vw(54);
-		height: vw(54);
+		width: 54px;
+		height: 54px;
+
+		@include max(dxl) {
+			width: vw(54);
+			height: vw(54);
+		}
 
 		@include max(d) {
 			width: vwd(54);
@@ -102,8 +133,13 @@
 	}
 
 	&__icon-6 {
-		width: vw(71);
-		height: vw(31);
+		width: 71px;
+		height: 31px;
+
+		@include max(dxl) {
+			width: vw(71);
+			height: vw(31);
+		}
 
 		@include max(d) {
 			width: vwd(71);
@@ -118,12 +154,18 @@
 
 	&__text {
 		color: $white;
-		font-size: vw(16);
+		font-size: 16px;
 		line-height: 1.19;
 		font-weight: 700;
 		text-align: center;
-		max-width: vw(180);
-		margin-top: vw(17);
+		max-width: 180px;
+		margin-top: 17px;
+
+		@include max(dxl) {
+			font-size: vw(16);
+			max-width: vw(180);
+			margin-top: vw(17);
+		}
 
 		@include max(d) {
 			font-size: vwd(16);

@@ -1,8 +1,12 @@
 .container {
 	width: 100%;
-	padding: 0 vw(20);
+	padding: 0 20px;
 	margin: 0 auto;
 	box-sizing: border-box;
+
+	@include max(dxl) {
+		padding: 0 vw(20);
+	}
 
 	@include max(d) {
 		padding: 0 vwd(20);

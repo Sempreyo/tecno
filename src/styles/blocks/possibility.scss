@@ -11,7 +11,11 @@
 	}
 
 	&__container {
-		max-width: vw(990);
+		max-width: 990px;
+
+		@include max(dxl) {
+			max-width: vw(990);
+		}
 
 		@include max(d) {
 			max-width: vwd(990);
@@ -25,10 +29,16 @@
 	&__content {
 		position: relative;
 		z-index: 1;
-		border-radius: vw(18);
-		border: vw(1) solid $color-button;
-		padding: vw(20) vw(35) vw(56);
+		border-radius: 18px;
+		border: 1px solid $color-button;
+		padding: 20px 35px 56px;
 		background-color: $white;
+
+		@include max(dxl) {
+			border-radius: vw(18);
+			border: vw(1) solid $color-button;
+			padding: vw(20) vw(35) vw(56);
+		}
 
 		@include max(d) {
 			border-radius: vwd(18);
@@ -49,12 +59,18 @@
 	}
 
 	&__list {
-		max-width: vw(315);
-		padding-left: vw(30);
-		margin-top: vw(65);
+		max-width: 315px;
+		padding-left: 30px;
+		margin-top: 65px;
 		list-style: initial;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			max-width: vw(315);
+			padding-left: vw(30);
+			margin-top: vw(65);
+		}
 
 		@include max(d) {
 			max-width: vwd(315);
@@ -70,8 +86,12 @@
 
 		li {
 			color: $color-title;
-			font-size: vw(18);
+			font-size: 18px;
 			font-weight: 500;
+
+			@include max(dxl) {
+				font-size: vw(18);
+			}
 
 			@include max(d) {
 				font-size: vwd(18);
@@ -97,11 +117,17 @@
 
 	&__image {
 		position: absolute;
-		top: vw(-210);
-		right: vw(-443);
-		min-width: vw(990);
+		top: -210px;
+		right: -443px;
+		min-width: 990px;
 		opacity: 0;
 		transform: translateX(50px);
+
+		@include max(dxl) {
+			top: vw(-210);
+			right: vw(-443);
+			min-width: vw(990);
+		}
 
 		@include max(d) {
 			top: vwd(-210);
@@ -119,11 +145,18 @@
 
 	&__arrow {
 		position: absolute;
-		top: vw(-290);
-		right: vw(36);
+		top: -290px;
+		right: 36px;
 		transform: rotate(180deg);
-		width: vw(83);
-		height: vw(211);
+		width: 83px;
+		height: 211px;
+
+		@include max(dxl) {
+			top: vw(-290);
+			right: vw(36);
+			width: vw(83);
+			height: vw(211);
+		}
 
 		@include max(d) {
 			top: vwd(-290);

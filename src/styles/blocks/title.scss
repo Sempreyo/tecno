@@ -1,9 +1,13 @@
 .title {
 	color: $color-title;
 	font-weight: 700;
-	font-size: vw(40);
+	font-size: 40px;
 	line-height: 1.2;
 	text-transform: uppercase;
+
+	@include max(dxl) {
+		font-size: vw(40);
+	}
 
 	@include max(d) {
 		font-size: vwd(40);

@@ -1,8 +1,12 @@
 .control {
 	position: relative;
 	background-color: $black;
-	padding: vw(73) 0 vw(436);
+	padding: 73px 0 436px;
 	overflow: hidden;
+
+	@include max(dxl) {
+		padding: vw(73) 0 vw(436);
+	}
 
 	@include max(d) {
 		padding: vwd(73) 0 vwd(436);
@@ -14,14 +18,21 @@
 
 	&::before {
 		position: absolute;
-		left: vw(65);
-		bottom: vw(-521);
+		left: 65px;
+		bottom: -521px;
 		z-index: 1;
 		content: "";
 		display: block;
-		width: vw(1042);
-		height: vw(1042);
+		width: 1042px;
+		height: 1042px;
 		background: radial-gradient(50% 50% at 50% 50%, #0264fa 0%, rgba(2, 100, 250, 0) 100%);
+
+		@include max(dxl) {
+			left: vw(65);
+			bottom: vw(-521);
+			width: vw(1042);
+			height: vw(1042);
+		}
 
 		@include max(d) {
 			left: vwd(65);
@@ -39,7 +50,13 @@
 	}
 
 	&__container {
-		max-width: vw(990);
+		position: relative;
+		max-width: 990px;
+
+		@include max(dxl) {
+			position: unset;
+			max-width: vw(990);
+		}
 
 		@include max(d) {
 			max-width: vwd(990);
@@ -57,12 +74,19 @@
 
 	&__border {
 		position: absolute;
-		top: vw(-45);
-		left: vw(39);
-		width: vw(624);
-		height: vw(350);
+		top: -45px;
+		left: 39px;
+		width: 624px;
+		height: 350px;
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 2000;
+
+		@include max(dxl) {
+			top: vw(-45);
+			left: vw(39);
+			width: vw(624);
+			height: vw(350);
+		}
 
 		@include max(d) {
 			top: vwd(-45);
@@ -86,10 +110,15 @@
 
 	&__text {
 		color: $white;
-		max-width: vw(408);
-		margin-top: vw(18);
+		max-width: 408px;
+		margin-top: 18px;
 		opacity: 0;
 		transform: translateY(50px);
+
+		@include max(dxl) {
+			max-width: vw(408);
+			margin-top: vw(18);
+		}
 
 		@include max(d) {
 			max-width: vwd(408);
@@ -104,11 +133,18 @@
 
 	&__bg-image {
 		position: absolute;
-		top: vw(-3);
-		right: vw(102);
-		max-width: vw(1271);
+		top: -77px;
+		left: 87px;
+		max-width: 1271px;
 		opacity: 0;
 		transform: translateX(50px);
+
+		@include max(dxl) {
+			top: 0;
+			left: unset;
+			right: vw(100);
+			max-width: vw(1271);
+		}
 
 		@include max(d) {
 			top: vwd(123);

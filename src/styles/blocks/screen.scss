@@ -1,5 +1,9 @@
 .screen {
-	padding: vw(67) 0 vw(62);
+	padding: 67px 0 62px;
+
+	@include max(dxl) {
+		padding: vw(67) 0 vw(62);
+	}
 
 	@include max(d) {
 		padding: vwd(67) 0 vwd(62);
@@ -10,7 +14,11 @@
 	}
 
 	&__container {
-		max-width: vw(1184);
+		max-width: 1184px;
+
+		@include max(dxl) {
+			max-width: vw(1184);
+		}
 
 		@include max(d) {
 			max-width: vwd(1184);
@@ -24,8 +32,13 @@
 	&__top {
 		display: flex;
 		align-items: center;
-		gap: vw(68);
-		padding-left: vw(98);
+		gap: 68px;
+		padding-left: 98px;
+
+		@include max(dxl) {
+			gap: vw(68);
+			padding-left: vw(98);
+		}
 
 		@include max(d) {
 			gap: vwd(68);
@@ -49,9 +62,13 @@
 	}
 
 	&__text {
-		max-width: vw(388);
+		max-width: 388px;
 		opacity: 0;
 		transform: translateX(50px);
+
+		@include max(dxl) {
+			max-width: vw(388);
+		}
 
 		@include max(d) {
 			max-width: vwd(388);
@@ -65,8 +82,12 @@
 
 	&__banner {
 		position: relative;
-		margin-top: vw(50);
+		margin-top: 50px;
 		opacity: 0;
+
+		@include max(dxl) {
+			margin-top: vw(50);
+		}
 
 		@include max(d) {
 			margin-top: vwd(50);
@@ -81,7 +102,11 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		border-radius: vw(18);
+		border-radius: 18px;
+
+		@include max(dxl) {
+			border-radius: vw(18);
+		}
 
 		@include max(d) {
 			border-radius: vwd(18);
@@ -94,12 +119,16 @@
 
 	&__arrows {
 		position: absolute;
-		left: vw(7);
+		left: 7px;
 		top: 44%;
 		transform: translateY(-50%);
 		display: flex;
 		justify-content: space-between;
 		width: 99%;
+
+		@include max(dxl) {
+			left: vw(7);
+		}
 
 		@include max(d) {
 			left: vwd(7);
@@ -115,8 +144,13 @@
 
 	&__arrow-1,
 	&__arrow-2 {
-		width: vw(83);
-		height: vw(211);
+		width: 83px;
+		height: 211px;
+
+		@include max(dxl) {
+			width: vw(83);
+			height: vw(211);
+		}
 
 		@include max(d) {
 			width: vwd(83);
@@ -148,7 +182,11 @@
 	&__characteristics {
 		display: flex;
 		justify-content: center;
-		margin-top: vw(30);
+		margin-top: 30px;
+
+		@include max(dxl) {
+			margin-top: vw(30);
+		}
 
 		@include max(d) {
 			margin-top: vwd(30);

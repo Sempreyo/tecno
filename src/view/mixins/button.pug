@@ -1,6 +1,6 @@
 mixin button(text, className, href, icon, iconW, iconH)
 	if href
-		a.button(class=className, href=href)&attributes(attributes)
+		a.button(class=className, href=href, target='_blank')&attributes(attributes)
 			span!= text
 			if icon
 				+icon(icon)(width=iconW, height=iconH)

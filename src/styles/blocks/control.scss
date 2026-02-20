@@ -1,23 +1,53 @@
 .control {
 	position: relative;
 	background-color: $black;
-	padding: 73px 0 436px;
+	padding: vw(73) 0 vw(436);
 	overflow: hidden;
+
+	@include max(d) {
+		padding: vwd(73) 0 vwd(436);
+	}
+
+	@include max(ti) {
+		padding: vwti(73) 0 vwti(436);
+	}
 
 	&::before {
 		position: absolute;
-		left: 65px;
-		bottom: -521px;
+		left: vw(65);
+		bottom: vw(-521);
 		z-index: 1;
 		content: "";
 		display: block;
-		width: 1042px;
-		height: 1042px;
+		width: vw(1042);
+		height: vw(1042);
 		background: radial-gradient(50% 50% at 50% 50%, #0264fa 0%, rgba(2, 100, 250, 0) 100%);
+
+		@include max(d) {
+			left: vwd(65);
+			bottom: vwd(-521);
+			width: vwd(1042);
+			height: vwd(1042);
+		}
+
+		@include max(ti) {
+			left: vwti(-400);
+			bottom: vwti(-521);
+			width: vwti(1042);
+			height: vwti(1042);
+		}
 	}
 
 	&__container {
-		max-width: 990px;
+		max-width: vw(990);
+
+		@include max(d) {
+			max-width: vwd(990);
+		}
+
+		@include max(ti) {
+			max-width: vwti(990);
+		}
 	}
 
 	&__wrapper {
@@ -27,21 +57,69 @@
 
 	&__border {
 		position: absolute;
-		top: -45px;
-		left: 39px;
-		width: 624px;
-		height: 350px;
+		top: vw(-45);
+		left: vw(39);
+		width: vw(624);
+		height: vw(350);
+		stroke-dasharray: 2000;
+		stroke-dashoffset: 2000;
+
+		@include max(d) {
+			top: vwd(-45);
+			left: vwd(39);
+			width: vwd(624);
+			height: vwd(350);
+		}
+
+		@include max(ti) {
+			top: vwti(-45);
+			left: vwti(39);
+			width: vwti(624);
+			height: vwti(350);
+		}
+	}
+
+	&__title {
+		opacity: 0;
+		transform: translateY(50px);
 	}
 
 	&__text {
 		color: $white;
-		max-width: 408px;
-		margin-top: 18px;
+		max-width: vw(408);
+		margin-top: vw(18);
+		opacity: 0;
+		transform: translateY(50px);
+
+		@include max(d) {
+			max-width: vwd(408);
+			margin-top: vwd(18);
+		}
+
+		@include max(ti) {
+			max-width: vwti(408);
+			margin-top: vwti(18);
+		}
 	}
 
 	&__bg-image {
 		position: absolute;
-		top: -3px;
-		right: 102px;
+		top: vw(-3);
+		right: vw(102);
+		max-width: vw(1271);
+		opacity: 0;
+		transform: translateX(50px);
+
+		@include max(d) {
+			top: vwd(123);
+			right: vwd(117);
+			max-width: vwd(900);
+		}
+
+		@include max(ti) {
+			top: vwti(223);
+			right: vwti(33);
+			max-width: vwti(600);
+		}
 	}
 }

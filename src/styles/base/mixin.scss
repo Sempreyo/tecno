@@ -48,18 +48,10 @@
 	@return calc(($px/1920) * 100)+vw;
 }
 
-@function vw1440($px) {
-	@return calc(($px/1440) * 100)+vw;
-}
-
-@function vw1279($px) {
+@function vwd($px) {
 	@return calc(($px/1279) * 100)+vw;
 }
 
-@function vw991($px) {
-	@return calc(($px/991) * 100)+vw;
-}
-
-@function vw767($px) {
+@function vwti($px) {
 	@return calc(($px/767) * 100)+vw;
 }

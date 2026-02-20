@@ -3,15 +3,44 @@
 	z-index: 1;
 
 	&__container {
-		max-width: 990px;
+		max-width: vw(990);
+
+		@include max(d) {
+			max-width: vwd(990);
+		}
+
+		@include max(ti) {
+			display: flex;
+			flex-direction: column;
+			gap: vwti(150);
+			max-width: vwti(990);
+		}
 	}
 
 	&__sound {
-		margin-top: -171px;
+		margin-top: vw(-171);
+
+		@include max(d) {
+			margin-top: vwd(-171);
+		}
+
+		@include max(ti) {
+			margin-top: vwti(-171);
+		}
 	}
 
 	&__autonomy {
-		margin-top: 87px;
-		margin-bottom: -286px;
+		margin-top: vw(87);
+		margin-bottom: vw(-286);
+
+		@include max(d) {
+			margin-top: vwd(87);
+			margin-bottom: vwd(-286);
+		}
+
+		@include max(ti) {
+			margin-top: vwti(87);
+			margin-bottom: vwti(-286);
+		}
 	}
 }

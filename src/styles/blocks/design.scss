@@ -1,38 +1,135 @@
 .design {
 	position: relative;
 	background-color: $black;
-	padding: 155px 0 147px;
+	padding: vw(155) 0 vw(147);
+
+	@include max(d) {
+		padding: vwd(155) 0 vwd(147);
+	}
+
+	@include max(ti) {
+		padding: vwti(155) 0 vwti(147);
+	}
 
 	&__container {
 		position: relative;
-		max-width: 990px;
+		max-width: vw(990);
+
+		@include max(d) {
+			max-width: vwd(990);
+		}
+
+		@include max(ti) {
+			max-width: vwti(990);
+		}
+	}
+
+	&__title {
+		opacity: 0;
+		transform: translateY(50px);
 	}
 
 	&__border {
 		position: absolute;
-		top: 56px;
+		top: vw(56);
 		left: 50%;
 		transform: translateX(-50%);
-		width: 624px;
-		height: 669px;
+		width: vw(624);
+		height: vw(669);
+		stroke-dasharray: 2000;
+		stroke-dashoffset: 2000;
+
+		@include max(d) {
+			top: vwd(56);
+			width: vwd(624);
+			height: vwd(669);
+		}
+
+		@include max(ti) {
+			top: vwti(56);
+			width: vwti(550);
+			height: vwti(590);
+		}
 	}
 
 	&__bg {
-		margin: 30px -110px 0 -120px;
+		margin: vw(30) vw(-110) 0 vw(-120);
+
+		@include max(d) {
+			margin: vwd(30) vwd(-110) 0 vwd(-120);
+		}
+
+		@include max(ti) {
+			margin: vwti(30) 0 0 0;
+		}
+	}
+
+	&__bg-image {
+		opacity: 0;
+		transform: translateX(-50px);
 	}
 
 	&__text {
 		color: $white;
-		max-width: 670px;
-		margin-top: 25px;
+		max-width: vw(670);
+		margin-top: vw(25);
+		opacity: 0;
+		transform: translateY(50px);
+
+		@include max(d) {
+			max-width: vwd(670);
+			margin-top: vwd(25);
+		}
+
+		@include max(ti) {
+			max-width: vwti(400);
+			margin-top: vwti(25);
+		}
 	}
 
 	&__arrows {
 		position: absolute;
-		top: 0;
-		right: 75px;
+		top: vw(-20);
+		right: vw(75);
 		display: flex;
 		flex-direction: column;
-		gap: 75px;
+		gap: vw(75);
+
+		@include max(d) {
+			top: vwd(-20);
+			right: vwd(75);
+			gap: vwd(75);
+		}
+
+		@include max(ti) {
+			top: vwti(-50);
+			right: vwti(75);
+			gap: vwti(75);
+		}
+	}
+
+	&__arrow-1,
+	&__arrow-2 {
+		width: vw(83);
+		height: vw(211);
+		opacity: 0;
+
+		@include max(d) {
+			width: vwd(83);
+			height: vwd(211);
+		}
+
+		@include max(ti) {
+			width: vwti(83);
+			height: vwti(211);
+		}
+	}
+
+	&__arrow-1 {
+		transform: translateY(-50px);
+	}
+
+	&__arrow-2 {
+		transform: translateY(50px);
 	}
 }

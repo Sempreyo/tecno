@@ -2,10 +2,10 @@ footer.footer
 	.footer__bg
 		+picture('hero-bg', 'jpg', 'footer__bg-image', '')
 	.container.footer__container
-		a.footer__logo(href='#')
-			+icon('logo-tecno')(width='137', height='28')
-		a.footer__logo(href='#')
-			+icon('logo-cnews')(width='137', height='25')
+		a.footer__logo(href='#', target='_blank')
+			+icon('logo-tecno', 'footer__logo-tecno')
+		a.footer__logo(href='#', target='_blank')
+			+icon('logo-cnews', 'footer__logo-cnews')
 		//.footer__adv
 			span Реклама
 			.footer__adv-tooltip

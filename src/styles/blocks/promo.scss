@@ -1,26 +1,69 @@
 .promo {
 	position: relative;
 	background-color: $color-bg-2;
-	padding: 58px 0 60px;
-	margin-top: -167px;
+	padding: vw(58) 0 vw(60);
+	margin-top: vw(-167);
+
+	@include max(d) {
+		padding: vwd(58) 0 vwd(60);
+		margin-top: vwd(-167);
+	}
+
+	@include max(ti) {
+		padding: vwti(58) 0 vwti(550);
+		margin-top: vwti(-167);
+	}
 
 	&__icon {
 		position: absolute;
-		top: 62px;
+		top: vw(62);
 		right: 14%;
+		width: vw(447);
+		height: vw(438);
+
+		@include max(d) {
+			top: vwd(62);
+			width: vwd(447);
+			height: vwd(438);
+		}
+
+		@include max(ti) {
+			top: vwti(62);
+			width: vwti(447);
+			height: vwti(438);
+		}
 	}
 
 	&__container {
 		position: relative;
 		z-index: 1;
 		display: flex;
-		gap: 32px;
-		max-width: 990px;
+		gap: vw(32);
+		max-width: vw(990);
+
+		@include max(d) {
+			gap: vwd(32);
+			max-width: vwd(990);
+		}
+
+		@include max(ti) {
+			flex-direction: column;
+			gap: vwti(32);
+			max-width: vwti(990);
+		}
 	}
 
 	&__images {
 		position: relative;
 		min-width: 48%;
+		pointer-events: none;
+		opacity: 0;
+
+		@include max(ti) {
+			order: 1;
+			max-width: vwti(456);
+			margin: 0 auto;
+		}
 	}
 
 	&__image-1,
@@ -29,20 +72,84 @@
 		filter: drop-shadow(14px 13px 62px rgba(68, 91, 125, 0.65));
 	}
 
+	&__image-1 {
+		width: vw(456);
+		height: vw(313);
+
+		@include max(d) {
+			width: vwd(456);
+			height: vwd(313);
+		}
+
+		@include max(ti) {
+			width: vwti(456);
+			height: vwti(313);
+		}
+	}
+
 	&__image-2 {
-		top: 213px;
-		right: 37px;
+		top: vw(213);
+		right: vw(37);
+		width: vw(281);
+		height: vw(352);
+
+		@include max(d) {
+			top: vwd(213);
+			right: vwd(37);
+			width: vwd(281);
+			height: vwd(352);
+		}
+
+		@include max(ti) {
+			top: vwti(213);
+			right: vwti(37);
+			width: vwti(281);
+			height: vwti(352);
+		}
 	}
 
 	&__content {
-		padding-top: 77px;
+		padding-top: vw(77);
+
+		@include max(d) {
+			padding-top: vwd(77);
+		}
+
+		@include max(ti) {
+			padding-top: vwti(77);
+		}
+	}
+
+	&__title {
+		opacity: 0;
+		transform: translateY(50px);
 	}
 
 	&__text {
-		margin-top: 32px;
+		margin-top: vw(32);
+		opacity: 0;
+		transform: translateY(50px);
+
+		@include max(d) {
+			margin-top: vwd(32);
+		}
+
+		@include max(ti) {
+			margin-top: vwti(32);
+		}
 	}
 
 	&__button {
-		margin-top: 30px;
+		margin-top: vw(30);
+		opacity: 0;
+		transform: translateY(50px);
+
+		@include max(d) {
+			margin-top: vwd(30);
+		}
+
+		@include max(ti) {
+			margin-top: vwti(30);
+		}
 	}
 }

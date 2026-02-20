@@ -8,15 +8,38 @@
 
 	&__group {
 		position: relative;
-		margin-top: 28px;
+		margin-top: vw(28);
+
+		@include max(d) {
+			margin-top: vwd(28);
+		}
+
+		@include max(ti) {
+			margin-top: vwti(28);
+		}
 	}
 
 	&__arrow {
 		position: absolute;
-		top: -106px;
+		top: vw(-106);
 		left: 68%;
 		z-index: 1;
-		transform: rotate(-90deg);
+		transform: translateY(50px) rotate(-90deg);
+		width: vw(83);
+		height: vw(211);
+		opacity: 0;
+
+		@include max(d) {
+			top: vwd(-106);
+			width: vwd(83);
+			height: vwd(211);
+		}
+
+		@include max(ti) {
+			top: vwti(-106);
+			width: vwti(83);
+			height: vwti(211);
+		}
 	}
 
 	&__banner {
@@ -24,28 +47,79 @@
 	}
 
 	&__banner-image {
-		max-width: 621px;
+		max-width: vw(621);
 		width: 100%;
-		border-radius: 18px;
+		border-radius: vw(18);
+		opacity: 0;
+
+		@include max(d) {
+			max-width: vwd(621);
+			border-radius: vwd(18);
+		}
+
+		@include max(ti) {
+			max-width: vwti(400);
+			border-radius: vwti(18);
+		}
 	}
 
 	&__border {
 		position: absolute;
-		bottom: -50px;
-		left: 62px;
-		width: calc(100% - 62px);
-		border: 1px solid $color-button;
-		border-radius: 18px;
-		padding: 25px 27px 50px;
+		bottom: vw(-50);
+		left: vw(62);
+		width: calc(100% - #{vw(62)});
+		border: vw(1) solid $color-button;
+		border-radius: vw(18);
+		padding: vw(25) vw(27) vw(50);
+		opacity: 0;
+
+		@include max(d) {
+			bottom: vwd(-50);
+			left: vwd(62);
+			width: calc(100% - #{vwd(62)});
+			border: vwd(1) solid $color-button;
+			border-radius: vwd(18);
+			padding: vwd(25) vwd(27) vwd(50);
+		}
+
+		@include max(ti) {
+			bottom: vwti(-200);
+			left: vwti(62);
+			width: calc(100% - #{vwti(62)});
+			border: vwti(1) solid $color-button;
+			border-radius: vwti(18);
+			padding: vwti(25) vwti(27) vwti(50);
+		}
 	}
 
 	&__content {
-		max-width: 268px;
+		max-width: vw(268);
 		margin-left: auto;
+
+		@include max(d) {
+			max-width: vwd(268);
+		}
+
+		@include max(ti) {
+			max-width: vwti(268);
+		}
 	}
 
 	&__title {
-		font-size: 24px;
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	&__subtitle {
+		font-size: vw(24);
 		font-weight: 500;
+
+		@include max(d) {
+			font-size: vwd(24);
+		}
+
+		@include max(ti) {
+			font-size: vwti(24);
+		}
 	}
 }

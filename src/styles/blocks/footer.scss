@@ -3,7 +3,15 @@
 
 	position: relative;
 	width: 100%;
-	padding: 72px 0;
+	padding: vw(72) 0;
+
+	@include max(d) {
+		padding: vwd(72) 0;
+	}
+
+	@include max(ti) {
+		padding: vwti(72) 0;
+	}
 
 	&__bg {
 		position: absolute;
@@ -22,8 +30,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 20px;
-		max-width: 990px;
+		gap: vw(20);
+		max-width: vw(990);
+
+		@include max(d) {
+			gap: vwd(20);
+			max-width: vwd(990);
+		}
+
+		@include max(ti) {
+			gap: vwti(20);
+			max-width: vwti(990);
+		}
 	}
 
 	&__logo {
@@ -31,6 +49,36 @@
 
 		&:hover {
 			opacity: 0.7;
+		}
+	}
+
+	&__logo-tecno {
+		width: vw(137);
+		height: vw(28);
+
+		@include max(d) {
+			width: vwd(137);
+			height: vwd(28);
+		}
+
+		@include max(ti) {
+			width: vwti(137);
+			height: vwti(28);
+		}
+	}
+
+	&__logo-cnews {
+		width: vw(137);
+		height: vw(25);
+
+		@include max(d) {
+			width: vwd(137);
+			height: vwd(25);
+		}
+
+		@include max(ti) {
+			width: vwti(137);
+			height: vwti(25);
 		}
 	}
 
@@ -48,14 +96,14 @@
 		span {
 			display: flex;
 			align-items: center;
-			gap: 8px;
+			gap: vw(8);
 			color: $white;
-			font-size: 12px;
+			font-size: vw(12);
 
 			&::before {
 				content: "";
-				width: 5px;
-				height: 5px;
+				width: vw(5);
+				height: vw(5);
 				background-color: $white;
 			}
 		}
@@ -63,14 +111,14 @@
 
 	&__adv-tooltip {
 		position: absolute;
-		left: -100px;
+		left: vw(-100);
 		bottom: 100%;
-		width: 270px;
-		border: 2px solid $color-button;
+		width: vw(270);
+		border: vw(2) solid $color-button;
 		background: rgba($white, 0.7);
 		backdrop-filter: blur(11px);
-		border-radius: 2px;
-		padding: 20px 10px;
+		border-radius: vw(2);
+		padding: vw(20) vw(10);
 		opacity: 0;
 		pointer-events: none;
 		transition: 0.3s ease;
@@ -78,7 +126,7 @@
 
 	&__adv-tooltip-block {
 		color: $color-text;
-		font-size: 12px;
+		font-size: vw(12);
 		line-height: 1.2;
 
 		a {
@@ -91,9 +139,9 @@
 		}
 
 		& + #{$parent}__adv-tooltip-block {
-			margin-top: 12px;
-			padding-top: 12px;
-			border-top: 1px solid $color-text;
+			margin-top: vw(12);
+			padding-top: vw(12);
+			border-top: vw(1) solid $color-text;
 		}
 	}
 }

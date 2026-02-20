@@ -7,20 +7,134 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 110px;
-		height: 110px;
+		width: vw(110);
+		height: vw(110);
 		border-radius: 50%;
 		background-color: rgba($white, 0.61);
-		border: 1px solid $white;
+		border: vw(1) solid $white;
+
+		@include max(d) {
+			width: vwd(110);
+			height: vwd(110);
+			border: vwd(1) solid $white;
+		}
+
+		@include max(ti) {
+			width: vwti(110);
+			height: vwti(110);
+			border: vwti(1) solid $white;
+		}
+	}
+
+	&__icon-1 {
+		width: vw(63);
+		height: vw(44);
+
+		@include max(d) {
+			width: vwd(63);
+			height: vwd(44);
+		}
+
+		@include max(ti) {
+			width: vwti(63);
+			height: vwti(44);
+		}
+	}
+
+	&__icon-2 {
+		width: vw(55);
+		height: vw(56);
+
+		@include max(d) {
+			width: vwd(55);
+			height: vwd(56);
+		}
+
+		@include max(ti) {
+			width: vwti(55);
+			height: vwti(56);
+		}
+	}
+
+	&__icon-3 {
+		width: vw(54);
+		height: vw(54);
+
+		@include max(d) {
+			width: vwd(54);
+			height: vwd(54);
+		}
+
+		@include max(ti) {
+			width: vwti(54);
+			height: vwti(54);
+		}
+	}
+
+	&__icon-4 {
+		width: vw(81);
+		height: vw(91);
+
+		@include max(d) {
+			width: vwd(81);
+			height: vwd(91);
+		}
+
+		@include max(ti) {
+			width: vwti(81);
+			height: vwti(91);
+		}
+	}
+
+	&__icon-5 {
+		width: vw(54);
+		height: vw(54);
+
+		@include max(d) {
+			width: vwd(54);
+			height: vwd(54);
+		}
+
+		@include max(ti) {
+			width: vwti(54);
+			height: vwti(54);
+		}
+	}
+
+	&__icon-6 {
+		width: vw(71);
+		height: vw(31);
+
+		@include max(d) {
+			width: vwd(71);
+			height: vwd(31);
+		}
+
+		@include max(ti) {
+			width: vwti(71);
+			height: vwti(31);
+		}
 	}
 
 	&__text {
 		color: $white;
-		font-size: 16px;
+		font-size: vw(16);
 		line-height: 1.19;
 		font-weight: 700;
 		text-align: center;
-		max-width: 180px;
-		margin-top: 17px;
+		max-width: vw(180);
+		margin-top: vw(17);
+
+		@include max(d) {
+			font-size: vwd(16);
+			max-width: vwd(180);
+			margin-top: vwd(17);
+		}
+
+		@include max(ti) {
+			font-size: vwti(16);
+			max-width: vwti(180);
+			margin-top: vwti(17);
+		}
 	}
 }

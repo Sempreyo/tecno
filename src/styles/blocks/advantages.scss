@@ -1,55 +1,143 @@
 .advantages {
-	padding: 120px 0 66px;
+	padding: vw(120) 0 vw(66);
+
+	@include max(d) {
+		padding: vwd(120) 0 vwd(66);
+	}
+
+	@include max(ti) {
+		padding: vwti(120) 0 vwti(66);
+	}
 
 	&__container {
-		max-width: 1450px;
+		max-width: vw(1450);
+
+		@include max(d) {
+			max-width: vwd(1450);
+		}
+
+		@include max(ti) {
+			max-width: vwti(1450);
+		}
 	}
 
 	&__wrapper {
 		position: relative;
-		padding: 3px 0 80px;
+		padding: vw(3) 0 vw(80);
+
+		@include max(d) {
+			padding: vwd(3) 0 vwd(80);
+		}
+
+		@include max(ti) {
+			padding: vwti(3) 0 vwti(80);
+		}
 	}
 
 	&__bg {
 		position: absolute;
 		inset: 0;
-		border-radius: 18px;
+		border-radius: vw(18);
 		overflow: hidden;
+
+		@include max(d) {
+			border-radius: vwd(18);
+		}
+
+		@include max(ti) {
+			border-radius: vwti(18);
+		}
 	}
 
 	&__bg-image {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		opacity: 0;
 	}
 
 	&__content {
 		position: relative;
-		max-width: 950px;
+		max-width: vw(950);
 		margin: 0 auto;
+
+		@include max(d) {
+			max-width: vwd(950);
+		}
+
+		@include max(ti) {
+			max-width: vwti(950);
+		}
 	}
 
 	&__title {
 		position: relative;
-		top: -68px;
+		top: vw(-68);
+		opacity: 0;
+		transform: translateY(50px);
+
+		@include max(d) {
+			top: vwd(-68);
+		}
+
+		@include max(ti) {
+			top: vwti(-68);
+		}
 	}
 
 	&__items {
 		display: flex;
 		justify-content: space-between;
-		gap: 20px;
-		margin: -10px -15px 0 15px;
+		gap: vw(20);
+		margin: vw(-10) vw(-15) 0 vw(15);
+
+		@include max(d) {
+			gap: vwd(20);
+			margin: vwd(-10) vwd(-15) 0 vwd(15);
+		}
+
+		@include max(ti) {
+			gap: vwti(20);
+			margin: vwti(-10) vwti(15) 0;
+		}
 	}
 
 	&__col {
 		display: flex;
 		flex-direction: column;
-		gap: 43px;
+		gap: vw(43);
+		opacity: 0;
+
+		@include max(d) {
+			gap: vwd(43);
+		}
+
+		@include max(ti) {
+			gap: vwti(43);
+		}
+
+		&:first-child {
+			transform: translateX(-50px);
+		}
+
+		&:last-child {
+			transform: translateX(50px);
+		}
 	}
 
 	&__colors {
 		position: relative;
-		padding-right: 28px;
-		margin-top: -130px;
+		padding-right: vw(28);
+		margin-top: vw(-130);
+
+		@include max(d) {
+			padding-right: vwd(28);
+			margin-top: vwd(-130);
+		}
+
+		@include max(ti) {
+			padding-right: vwti(28);
+			margin-top: vwti(-130);
+		}
 	}
 }

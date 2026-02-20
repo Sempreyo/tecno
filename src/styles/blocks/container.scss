@@ -1,10 +1,14 @@
 .container {
 	width: 100%;
-	padding: 0 20px;
+	padding: 0 vw(20);
 	margin: 0 auto;
 	box-sizing: border-box;
 
-	@include max(t) {
-		padding: 0 15px;
+	@include max(d) {
+		padding: 0 vwd(20);
+	}
+
+	@include max(ti) {
+		padding: 0 vwti(20);
 	}
 }

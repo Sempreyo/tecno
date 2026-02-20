@@ -1,26 +1,74 @@
 .autonomy {
+	&__banner {
+		opacity: 0;
+	}
+
 	&__banner-image {
 		width: 100%;
-		border-radius: 18px;
+		border-radius: vw(18);
+
+		@include max(d) {
+			border-radius: vwd(18);
+		}
+
+		@include max(ti) {
+			border-radius: vwti(18);
+		}
 	}
 
 	&__content {
 		position: relative;
 		display: flex;
-		gap: 45px;
+		gap: vw(45);
 		background-color: $color-button;
-		border-radius: 18px;
-		padding: 43px 97px;
-		margin: -94px 66px 0;
+		border-radius: vw(18);
+		padding: vw(43) vw(97);
+		margin: vw(-94) vw(66) 0;
+		opacity: 0;
+		transform: translateY(50px);
+
+		@include max(d) {
+			gap: vwd(45);
+			border-radius: vwd(18);
+			padding: vwd(43) vwd(97);
+			margin: vwd(-94) vwd(66) 0;
+		}
+
+		@include max(ti) {
+			flex-direction: column;
+			gap: vwti(20);
+			border-radius: vwti(18);
+			padding: vwti(43);
+			margin: vwti(-94) vwti(66) 0;
+		}
 	}
 
 	&__title {
 		color: $white;
-		font-size: 24px;
+		font-size: vw(24);
 		font-weight: 500;
+
+		@include max(d) {
+			font-size: vwd(24);
+		}
+
+		@include max(ti) {
+			font-size: vwti(24);
+			text-align: center;
+		}
+
+		br {
+			@include max(ti) {
+				display: none;
+			}
+		}
 	}
 
 	&__text {
 		color: $white;
+
+		@include max(ti) {
+			text-align: center;
+		}
 	}
 }

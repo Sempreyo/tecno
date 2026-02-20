@@ -139,14 +139,14 @@
 	&__phone {
 		position: absolute;
 		top: 33%;
-		right: vw(-55);
+		right: vw(-105);
 		width: vw(682);
 		height: vw(419);
 		opacity: 0;
 		transform: translateX(50px);
 
 		@include max(d) {
-			right: vwd(-55);
+			right: vwd(-105);
 			width: vwd(682);
 			height: vwd(419);
 		}
